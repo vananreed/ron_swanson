@@ -1,0 +1,38 @@
+.ron-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ron-img {
+  height: 50vh;
+  width: auto;
+  border-radius: 50%;
+  padding: 10px 0;
+}
+
+.ron-img:hover {
+    box-shadow: none;
+}
+
+.title {
+  text-align: center;
+}
+
+.get-quote-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.quote-area {
+  text-align: center;
+}
+
+.rate-this-quote {
+  display: flex;
+  justify-content: space-around;
+}
+
+.rate-button {
+  padding: 10px;
+}
