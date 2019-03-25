@@ -1,0 +1,28 @@
+<div class="container">
+  <h2 class="title">Click my face for wisdom.</h2>
+  <div class="ron-wrapper">
+    <%= link_to quotes_path(size: "any"), method: :post do %>
+      <%= image_tag 'ron-swanson', class: "ron-img" %>
+    <% end %>
+  </div>
+  <div class="get-quote-buttons">
+    <%= link_to "Get Small Quote", quotes_path(size: "small"), method: :post, class: "btn btn-primary" %>
+    <%= link_to "Get Medium Quote", quotes_path(size: "medium"), method: :post, class: "btn btn-warning" %>
+    <%= link_to "Get Large Quote", quotes_path(size: "large"), method: :post, class: "btn btn-danger" %>
+  </div>
+
+  <% if @quote.presence %>
+  <div class="quote-area">
+    <h1>"<%= @quote.text %>"</h1>
+    <div>Average Rating: <%= @quote.average_rating %></div>
+    <div class="rate-this-quote">
+
+      <%= simple_form_for @review, url: quote_reviews_path(@quote), remote: true, method: :post, html: { class: 'form-inline' } do |f|%>
+        Rate this quote:
+        <%= f.input :rating, collection: 1..5, label: false %>
+        <span class="rate-button"><%= f.submit "Rate", class: "btn btn-success" %></span>
+      <% end %>
+    </div>
+  </div>
+  <% end %>
+</div>
