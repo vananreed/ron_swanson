@@ -1,24 +1,13 @@
-# README
+# A simple Ron Swanson quote generator to satisfy your daily need of inspiration.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version: 2.4.4
 
-Things you may want to cover:
+* Installation
 
-* Ruby version
+`bundle install`
 
-* System dependencies
+`rails db:setup`
 
-* Configuration
+* Testing
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`bundle exec rspec`
