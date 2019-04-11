@@ -1,14 +1,14 @@
 <div class="container">
   <h2 class="title">Click my face for wisdom.</h2>
   <div class="ron-wrapper">
-    <%= link_to quotes_path(size: "any"), method: :post do %>
+    <%= link_to quotes_path(size: "any", last_quote: @quote), method: :post do %>
       <%= image_tag 'ron-swanson.jpg', class: "ron-img" %>
     <% end %>
   </div>
   <div class="get-quote-buttons">
-    <%= link_to "Get Small Quote", quotes_path(size: "small"), method: :post, class: "btn btn-primary" %>
-    <%= link_to "Get Medium Quote", quotes_path(size: "medium"), method: :post, class: "btn btn-warning" %>
-    <%= link_to "Get Large Quote", quotes_path(size: "large"), method: :post, class: "btn btn-danger" %>
+    <%= link_to "Get Small Quote", quotes_path(size: "small", last_quote: @quote), method: :post, class: "btn btn-primary" %>
+    <%= link_to "Get Medium Quote", quotes_path(size: "medium", last_quote: @quote), method: :post, class: "btn btn-warning" %>
+    <%= link_to "Get Large Quote", quotes_path(size: "large", last_quote: @quote), method: :post, class: "btn btn-danger" %>
   </div>
 
   <% if @quote.presence %>
